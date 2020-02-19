@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/dbarrinha/node-clean-architecture/issues"
   },
-  "homepage": "https://github.com/dbarrinha/node-clean-architecture#readme"
+  "homepage": "https://github.com/dbarrinha/node-clean-architecture#readme",
+  "devDependencies": {
+    "standard": "^14.3.1"
+  }
 }
