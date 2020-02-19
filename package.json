@@ -1,0 +1,20 @@
+{
+  "name": "node-clean-architecture",
+  "version": "1.0.0",
+  "description": "node + clean architecture + tdd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbarrinha/node-clean-architecture.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dbarrinha/node-clean-architecture/issues"
+  },
+  "homepage": "https://github.com/dbarrinha/node-clean-architecture#readme"
+}
