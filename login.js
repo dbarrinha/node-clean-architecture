@@ -1,4 +1,4 @@
-
+/*
 const mongoose = require('mongoose')
 const AccountModel = mongoose.model('Account')
 
@@ -19,17 +19,6 @@ class ExpressRouterAdapter {
   }
 }
 
-class SignUpRouter {
-  async route (httpRequest) {
-    const { email, password, repeatPassword } = httpRequest.body
-    const user = new SignUseCase().signUp(email, password, repeatPassword)
-    return {
-      statusCode: 200,
-      body: user
-    }
-  }
-}
-
 class SignUseCase {
   async signUp (email, password, repeatPassword) {
     if (password === repeatPassword) {
@@ -44,3 +33,4 @@ class AddAccountRepository {
     return user
   }
 }
+*/
