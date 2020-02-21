@@ -1,6 +1,13 @@
 class LoginRouter {
   async route (httpRequest) {
-    if (!httpRequest.body.email || !httpRequest.body.password) {
+    if (!httpRequest || !httpRequest.body) {
+      return {
+        statusCode: 500,
+        body: {}
+      }
+    }
+    const { email, password } = httpRequest.body
+    if (!email || !password) {
       return {
         statusCode: 400,
         body: {}
@@ -30,5 +37,17 @@ describe('Login Router', () => {
     }
     const httResponse = await sut.route(httpRequest)
     expect(httResponse.statusCode).toBe(400)
+  })
+
+  test('Should return 500 if no httpRequest is provided', async () => {
+    const sut = new LoginRouter()
+    const httResponse = await sut.route()
+    expect(httResponse.statusCode).toBe(500)
+  })
+
+  test('Should return 500 if no httpRequest has no body', async () => {
+    const sut = new LoginRouter()
+    const httResponse = await sut.route({})
+    expect(httResponse.statusCode).toBe(500)
   })
 })
